@@ -3,26 +3,35 @@ package Ejercicio2;
 import java.util.ArrayList;
 import java.util.List;
 
-class Departamento {
+public class Departamento {
     private String nombre;
-    private List<Empleado> empleados;
+    private int codigo;
+    private List<Empleado> listaEmpleados;
 
-    public Departamento(String nombre) {
+    public Departamento(String nombre, String codigo) {
         this.nombre = nombre;
-        this.empleados = new ArrayList<>();
+        this.codigo = codigo;
+        this.listaEmpleados = new ArrayList<>();
     }
 
     public void agregarEmpleado(Empleado empleado) {
-        empleados.add(empleado);
-        System.out.println(empleado.getNombre() + " agregado al departamento " + nombre);
-    }
-
-    public void removerEmpleado(Empleado empleado) {
-        empleados.remove(empleado);
-        System.out.println(empleado.getNombre() + " removido del departamento " + nombre);
+        listaEmpleados.add(empleado);
     }
 
     public String getNombre() {
         return nombre;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+    
 }

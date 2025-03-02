@@ -1,19 +1,15 @@
 package Ejercicio2;
 
-abstract class Empleado {
+abstract class Empleado implements Contribuyente{
     protected String nombre;
-    protected int id;
-    protected String departamento;
+    protected String idEmpleado;
+    protected Departamento departamento;
 
-    public Empleado(String nombre, int id, String departamento) {
+    public Empleado(String nombre, String idEmpleado, Departamento departamento) {
         this.nombre = nombre;
-        this.id = id;
+        this.idEmpleado = idEmpleado;
         this.departamento = departamento;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public abstract void contribuir();
+    public abstract void contribuir();  
 }

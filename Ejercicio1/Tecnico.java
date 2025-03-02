@@ -1,12 +1,22 @@
 package Ejercicio1;
 
-class Tecnico extends Empleado {
-    public Tecnico(String nombre, int id, String departamento) {
-        super(nombre, id, departamento);
+public class Tecnico extends Empleado implements Contribuyente {
+    
+    private String especialidad;
+
+    public Tecnico(String nombre, String idEmpleado, Departamento departamento) {
+            super(nombre, idEmpleado, departamento);
+            this.especialidad = especialidad;
+        }
+    public void realizarTarea() {
+        System.out.println(nombre  + "Realiza una tarea técnica...");
+    }
+    
+    public void contribuir() {
+        System.out.println(nombre  + " ejecuta tareas técnicas.");
     }
 
-    @Override
-    public void contribuir() {
-        System.out.println(nombre + " está desarrollando una tarea técnica.");
+    public String getEspecialidad() { 
+        return especialidad; 
     }
 }

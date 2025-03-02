@@ -30,8 +30,7 @@ public class Proyecto {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
-    }
-    
+    } 
 }
     
 

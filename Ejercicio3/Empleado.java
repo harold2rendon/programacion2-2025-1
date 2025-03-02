@@ -1,5 +1,3 @@
-package Ejercicio1;
-
 abstract class Empleado implements Contribuyente{
     protected String nombre;
     protected String idEmpleado;
@@ -11,5 +9,5 @@ abstract class Empleado implements Contribuyente{
         this.departamento = departamento;
     }
 
-    public abstract void contribuir();  
+    public abstract void contribuir();  //Liskov (L) garantiza que las subclases lo implementen
 }

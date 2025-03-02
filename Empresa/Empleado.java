@@ -1,4 +1,5 @@
-abstract class Empleado {
+// Clase base Empleado (O: Principio Abierto/Cerrado)
+abstract class Empleado implements Contribuyente{
     protected String nombre;
     protected String idEmpleado;
     protected Departamento departamento;
@@ -9,5 +10,5 @@ abstract class Empleado {
         this.departamento = departamento;
     }
 
-    public abstract String contribuir();
+    public abstract void contribuir();  //Liskov (L) garantiza que las subclases lo implementen
 }

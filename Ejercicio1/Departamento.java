@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Departamento {
     private String nombre;
-    private String codigo;
+    private int codigo;
     private List<Empleado> listaEmpleados;
 
     public Departamento(String nombre, String codigo) {

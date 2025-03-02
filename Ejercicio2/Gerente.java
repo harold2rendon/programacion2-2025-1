@@ -1,12 +1,21 @@
 package Ejercicio2;
 
-class Gerente extends Empleado {
-    public Gerente(String nombre, int id, String departamento) {
-        super(nombre, id, departamento);
+public class Gerente extends Empleado implements Contribuyete {
+    private List<Proyecto> proyectosGestionados;
+
+    public Gerente(String nombre, String idEmpleado, Departamento departamento) {
+        super(nombre, idEmpleado, departamento);
     }
 
-    @Override
+    public void gestionarProyecto() {
+        System.out.println("Gestionando un proyecto...");
+    }
+
+    public String gestionarEquipo() {
+        return nombre + " está gestionando su equipo.";
+    }
+
     public void contribuir() {
-        System.out.println(nombre + " está supervisando el proyecto.");
+        System.out.println("El Gerente gestiona proyectos y equipos.");
     }
 }

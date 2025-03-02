@@ -1,14 +1,21 @@
 package Ejercicio2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Departamento TI = new Departamento("TI");
-        Departamento RRHH = new Departamento("RRHH");
+        Departamento departamento = new Departamento("Desarrollo", 101, new ArrayList<>());
 
-        Empleado empleado = new Tecnico("Lucas", 3, "TI");
-        TI.agregarEmpleado(empleado);
+        Empleado empleado1 = new Tecnico("Juan", 1, departamento, "Redes");
+        Empleado empleado2 = new Gerente("María", 2, departamento, new ArrayList<>());
 
-        TI.removerEmpleado(empleado);
-        RRHH.agregarEmpleado(empleado);
+        departamento.agregarEmpleado(empleado1);
+        departamento.agregarEmpleado(empleado2);
+
+        System.out.println("Empleados en el departamento " + departamento.getNombre() + ":");
+        for (Empleado emp : departamento.getEmpleados()) {
+            System.out.println("- " + emp.nombre);
+        }
     }
 }

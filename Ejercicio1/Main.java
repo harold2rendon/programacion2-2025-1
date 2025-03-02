@@ -2,16 +2,17 @@ package Ejercicio1;
 
 public class Main {
     public static void main(String[] args) {
-        Proyecto proyecto = new Proyecto("Desarrollo Web");
+        Proyecto proyecto = new Proyecto("Nuevo Software", 202, new ArrayList<>());
 
-        Empleado gerente = new Gerente("Carlos", 1, "IT");
-        Empleado tecnico1 = new Tecnico("Ana", 2, "IT");
-        Empleado tecnico2 = new Tecnico("Luis", 3, "IT");
+        Empleado empleado1 = new Tecnico("Luis", 3, null, "Seguridad Informática");
+        Empleado empleado2 = new Gerente("Carlos", 4, null, new ArrayList<>());
 
-        proyecto.asignarEmpleado(gerente);
-        proyecto.asignarEmpleado(tecnico1);
-        proyecto.asignarEmpleado(tecnico2);
+        proyecto.asignarEmpleado(empleado1);
+        proyecto.asignarEmpleado(empleado2);
 
-        proyecto.mostrarEmpleados();
+        System.out.println("Empleados asignados al proyecto " + proyecto.getNombre() + ":");
+        for (Empleado emp : proyecto.getEmpleados()) {
+            System.out.println("- " + emp.nombre);
+        }
     }
 }
