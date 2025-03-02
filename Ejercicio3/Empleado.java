@@ -9,5 +9,5 @@ abstract class Empleado implements Contribuyente{
         this.departamento = departamento;
     }
 
-    public abstract void contribuir();  //Liskov (L) garantiza que las subclases lo implementen
+    public abstract void contribuir();  
 }
